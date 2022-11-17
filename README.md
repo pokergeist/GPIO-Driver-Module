@@ -14,11 +14,16 @@ I will provide all of the files necessary to have these boards fabricated and po
 | :--------: | ------------------------------------- |
 | 2022-11-16 | Initial release - unfabbed, untested. |
 
+## ToDo List
+
+* Label the solder holes.
+* Document the hole size.
+
 ## Mechanical Info
 
 The board is currently just under 30mm square with (2) M2 mounting holes. Dimensions to be provided later. The header are 5-conductor, 0.1"/2.54mm pitch. Hole size = TODO.
 
-The board size can be reduced by moving circuitry for (2) channels to the other side of the board and moving the connectors so that they're symmetrical.
+The board's size could be reduced by moving circuitry for two channels to the other side of the board and moving the connectors so that they're symmetrical.
 
 ## Components
 
