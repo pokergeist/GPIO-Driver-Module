@@ -24,14 +24,14 @@ I will provide all of the files necessary to have these boards fabricated and po
 I'm considering various options to give this board broader utility.
 
 * Remove the gate pull-down resistor for a smaller board since most designs are low speed and the GPIO outputs are actively driven.
-* Move to channels to the underside of the board and make the headers symmetrical.
+* Move to channels to the underside of the board and make the headers symmetrical. **Done.**
 * Use an I2C enabled port [expander](https://www.digikey.com/short/jd43pq03) to drive the gates. A Qwiic/STEMMA QT connector would eliminate the Trigger header and free up GPIO pins. Push-pull I/O preferred. ([D-K Search](https://www.digikey.com/short/ph7ww3hz))
 
 ## Mechanical Info
 
 The board is currently 29mm square with (2) M2 mounting holes. The header are 5-conductor, 0.1"/2.54mm pitch. Hole size = 0.076"/1.93mm. The dimensional drawing is [here](assets/dimensions.png).
 
-The board's size could be reduced by moving circuitry for two channels to the other side of the board and moving the connectors so that they're symmetrical. Or by removing the gate pull-down resistors, or even the voltage dropping resistors.
+The board's size could be reduced by moving circuitry for two channels to the other side of the board and moving the connectors so that they're symmetrical. Or by removing the gate pull-down resistors, or even the voltage dropping resistors. Skinny board shown below. 18x30.5mm
 
 ## Components
 
@@ -94,7 +94,9 @@ Connect the cathode of your device to the LOAD- pin.
 
 #### Board
 
-![board](assets/board-top-mfg.png)
+![original board](assets/board-top-mfg.png)
+
+![skinny board](assets/board-skinny-top-mfg.png)
 
 #### Schematic
 
