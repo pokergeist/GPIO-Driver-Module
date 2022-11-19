@@ -138,4 +138,4 @@ Connect the cathode of your device to the LOAD- pin.
 
 #### Original & Skinny
 
-![orig & Skinny](assets/schematic.png)
+![orig & Skinny](assets/orig/schematic.png)
