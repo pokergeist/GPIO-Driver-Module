@@ -6,26 +6,52 @@ This project provides (4) channels of GPIO triggered low-side switching to groun
 
 Rx3 is a 0Ω jumper that can be replaced by a 1206-size dropping resistor limit the current through your device.
 
-I will provide all of the files necessary to have these boards fabricated and populated with the small SMD components. Some number of panels will be produced and made available via Assistive Technology channels.
+I will provide all of the files necessary to have these boards fabricated and populated with the small SMD components. Some number of panels will be produced and made available via Assisti4ve Technology channels.
 
 ## Status
 
 |    Date    | Status                                |
 | :--------: | ------------------------------------- |
+| 2022-11-19 | Introducing variants                  |
 | 2022-11-16 | Initial release - unfabbed, untested. |
 
 ## ToDo List
 
-* ~~Label the solder holes~~.
-* ~~Document hole placement~~.
+* Reset circuitry for the FeatherWing version.
+
+## Variants
+
+### Original
+
+The Original was a quick effort related to another project to see if there was interest. Then the wheels started spinning.
+
+### Skinny
+
+The Skinny was a simple effort to clean up the Original board by moving half of the circuitry to the underside and centering the headers so everything was symetrical.
+
+### QT
+
+The QT was another variant to remove the need for the GPIO control lines from the MCU and instead make a Qwiic/STEMMA QT version with an I2C enabled I/O Expander. The Diodes Inc. PI4IOE5V9536 seems to fit the bill. Two Qwiic/STEMMA QT ports are provided for daisy-chaining. The Load header remains.
+
+### Wing
+
+Next came a request to fit the board to common board sizes. The (Feather) Wing was born.
+
+### Variant Files
+
+Details for each of the variants will appear in the README.md file in each of the board subdirectories.  Board directories will also include:
+
+* Eagle PCB files including sch, brd, and zip file containing Gerber, centroid, and BOM files suitable for submission for board manufacturing and assembly.
+* An importable Digi-Key Parts List.
 
 ## Options
 
 I'm considering various options to give this board broader utility.
 
 * Remove the gate pull-down resistor for a smaller board since most designs are low speed and the GPIO outputs are actively driven.
-* Move to channels to the underside of the board and make the headers symmetrical. **Done.**
-* Use an I2C enabled port [expander](https://www.digikey.com/short/jd43pq03) to drive the gates. A Qwiic/STEMMA QT connector would eliminate the Trigger header and free up GPIO pins. Push-pull I/O preferred. ([D-K Search](https://www.digikey.com/short/ph7ww3hz))
+  * I may be able to do this unless the startup time required to drive the gate low is too great and we need a stronger pull-down.
+
+* Use an I2C enabled port [expander](https://www.digikey.com/short/jd43pq03) to drive the gates. A Qwiic/STEMMA QT connector would eliminate the Trigger header and free up GPIO pins. Push-pull I/O preferred. ([D-K Search](https://www.digikey.com/short/ph7ww3hz)). **Done.**
 
 ## Mechanical Info
 
@@ -92,12 +118,24 @@ Connect the cathode of your device to the LOAD- pin.
 
 ## Images
 
-#### Board
+#### Original
 
-![original board](assets/board-top-mfg.png)
+![original](assets/orig/board-top-mfg.png)
 
-![skinny board](assets/board-skinny-top-mfg.png)
+#### Skinny
 
-#### Schematic
+![Skinny](assets/Skinny/board-skinny-top-mfg.png)
 
-![schematic](assets/schematic.png)
+#### QT
+
+![](assets/QT/board-QT-top-mfg.png)
+
+#### Wing
+
+![Wing](assets/Wing/board-Wing-top-mfg.png)
+
+### Schematics
+
+#### Original & Skinny
+
+![orig & Skinny](assets/schematic.png)
