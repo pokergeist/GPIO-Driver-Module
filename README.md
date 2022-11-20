@@ -17,7 +17,7 @@ I will provide all of the files necessary to have these boards fabricated and po
 
 ## ToDo List
 
-* Reset circuitry for the FeatherWing version.
+* ~~Reset circuitry for the FeatherWing version~~.
 
 ## Variants
 
@@ -55,7 +55,7 @@ I'm considering various options to give this board broader utility.
 
 ## Mechanical Info
 
-The board is currently 29mm square with (2) M2 mounting holes. The header are 5-conductor, 0.1"/2.54mm pitch. Hole size = 0.076"/1.93mm. The dimensional drawing is [here](assets/dimensions.png).
+The board is currently 29mm square with (2) M2 mounting holes. The header are 5-conductor, 0.1"/2.54mm pitch. Hole size = 0.076"/1.93mm. The dimensional drawing is [here](boards/DriverModule/assets/dimensions.png).
 
 The board's size could be reduced by moving circuitry for two channels to the other side of the board and moving the connectors so that they're symmetrical. Or by removing the gate pull-down resistors, or even the voltage dropping resistors. Skinny board shown below. 18x30.5mm
 
@@ -120,22 +120,25 @@ Connect the cathode of your device to the LOAD- pin.
 
 #### Original
 
-![original](assets/orig/board-top-mfg.png)
+[Original](boards/DriverModule/)
+
+![original](boards/DriverModule/assets/board-top-mfg.png)
 
 #### Skinny
 
-![Skinny](assets/Skinny/board-skinny-top-mfg.png)
+[Skinny](boards/DriverModuleSkinny/)
+
+![Skinny](boards/DriverModuleSkinny/assets/board-Skinny-top-mfg.png)
 
 #### QT
 
-![](assets/QT/board-QT-top-mfg.png)
+[QT](boards/DriverModuleQT/)
+
+![Wing](boards/DriverModuleQT/assets/board-QT-top-mfg.png)
 
 #### Wing
 
-![Wing](assets/Wing/board-Wing-top-mfg.png)
+[Wing](boards/DriverModuleWing/)
 
-### Schematics
+![Wing](boards/DriverModuleWing/assets/board-Wing-top-mfg.png)
 
-#### Original & Skinny
-
-![orig & Skinny](assets/orig/schematic.png)
